@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Quiz Mania</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+		/>
+		<link rel="stylesheet" href="css/option.css" />
+	</head>
+	<body>
+		<div class="heading-option" data-text="CUSTOMIZE YOUR EXPERIENCE">
+			CUSTOMIZE YOUR EXPERIENCE
+		</div>
+		<div class="form">
+			<form action="/option" method="POST">
+				<label for="category">Choose your Category</label><br />
+				<select name="category" id="category">
+					<option value="0" selected
+						>---SELECT YOUR CATEGORY---</option
+					>
+					<option value="9">General Knowledge</option>
+					<option value="17">Science And Nature</option>
+					<option value="21">Sports</option>
+					<option value="23">History</option>
+					<option value="27">Animals</option>
+					<option value="28">Vehicle</option> </select
+				><br />
+				<label for="amount">Select number of Questions</label><br />
+				<input
+					type="number"
+					max="50"
+					min="5"
+					placeholder="--- ENTER THE NUMBER ---"
+					name="amount"
+				/><br />
+				<label for="difficulty">Select Difficulty Level</label><br />
+				<select name="difficulty" id="difficulty">
+					<option value="0" selected
+						>---SELECT DIFFICULTY LEVEL---</option
+					>
+					<option value="easy">Easy</option>
+					<option value="medium">Medium</option>
+					<option value="hard">Hard</option>
+				</select>
+				<br />
+				<button type="submit">Submit</button>
+			</form>
+        </div>
+	</body>
+</html>

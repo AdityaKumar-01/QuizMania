@@ -1,0 +1,160 @@
+/*--------------------------------*/
+/*BASIC SETUP*/
+/*--------------------------------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 22px;
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+body {
+	color: white;
+	background-color: #000000;
+	background-image: url(inspiration-geometry.png);
+}
+html,
+body {
+	overflow-x: hidden;
+}
+
+/*--------------------------------*/
+/*HEADING*/
+/*--------------------------------*/
+.heading-option {
+	font-family: 'Roboto', sans-serif;
+	font-size: 200%;
+	-webkit-text-stroke: 1px orangered;
+	color: transparent;
+	margin-top: 60px;
+	left: 25%;
+	position: relative;
+	display: block;
+}
+
+.heading-option:hover {
+	color: red;
+	-webkit-text-stroke: 1px black;
+	transition: 0.5s;
+}
+.heading-option:before,
+.heading-option:after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+.heading-option:hover:before {
+	color: orangered;
+	z-index: 1;
+	-webkit-text-stroke: 1px black;
+	transform: translate(5px, -5px);
+}
+.heading-option:hover:after {
+	color: orange;
+	z-index: 2;
+	-webkit-text-stroke: 1px black;
+	transform: translate(10px, -10px);
+}
+/*--------------------------------*/
+/*OPTIONS*/
+/*--------------------------------*/
+.form {
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	width: 80%;
+	height: 50vh;
+	background-color: rgba(255, 255, 255, 0.466);
+	color: black;
+	padding: 30px;
+	padding-left: 50px;
+	border-radius: 20px;
+}
+form {
+	padding-left: 100px;
+	margin-left: 100px;
+}
+label {
+	font-weight: 400;
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	margin-bottom: 5px;
+}
+input,
+select {
+	display: inline-block;
+	width: 70%;
+	height: 30px;
+	outline: none;
+	border: none;
+}
+select {
+	background-color: white;
+	color: black;
+	transition: background-color, color 0.5s;
+}
+select:hover {
+	background-color: orange;
+	color: black;
+	transition: background-color, color 0.5s;
+}
+
+input::placeholder {
+	font-size: 100%;
+	color: black;
+	padding: 1px;
+	margin: 2px;
+}
+option,
+input {
+	background-color: white;
+	color: black;
+	transition: background-color, color 0.5s;
+}
+option:hover,
+input:hover {
+	background-color: orange;
+	color: black;
+	transition: background-color, color 0.5s;
+}
+button {
+	width: 150px;
+	height: 40px;
+	border: none;
+	margin-top: 25px;
+	margin-left: 180px;
+	outline: none;
+	align-items: center;
+	background-color: orangered;
+	color: black;
+	font-weight: 400;
+	box-shadow: 5px 5px 15px none;
+    transition: box-shadow 0.5s;
+    display: inline-block;
+}
+button:hover {
+	box-shadow: 5px 5px 15px black;
+	transition: box-shadow 0.5s;
+}
+.table{
+    background-color:rgba(255, 255, 255, 0.521); 
+    color:white;  
+}
+.row{
+    display: inline-block;
+    width:30%;
+    padding-left:30px;
+    border-bottom:1px solid red;
+}
+.return{
+    display: inline-block;
+
+}

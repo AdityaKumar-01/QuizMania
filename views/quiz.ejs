@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Quiz Mania</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+		/>
+		<link rel="stylesheet" href="css/quiz.css" />
+	</head>
+	<body>
+		<div class="info">
+			<div class="name">
+				User Name: <%=Name%>
+			</div>
+            <div class="current">
+                Current Score: <%=currentScore%> %
+            </div>
+		</div>
+		<br /><br />
+		<div class="form-heading" data-text="<%=topic%>"><%=topic%></div>
+		<div class="form-wrapper">
+			<form action="/response" method="post" class="response-form">
+				<%var i=0;%> <%question.forEach(function(item){%>
+				<div class="item">
+					<h2>Q<%=i+1%>. <%=item.question%></h2>
+					<select name="<%=i%>" id="<%=i%>" required>
+						<option value="0" selected
+							>--- SELECT YOUR ANSWER ---</option
+						>
+						<option value="<%=item.options[0]%>"
+							><%=item.options[0]%></option
+						>
+						<option value="<%=item.options[1]%>"
+							><%=item.options[1]%></option
+						>
+						<option value="<%=item.options[2]%>"
+							><%=item.options[2]%></option
+						>
+						<option value="<%=item.options[3]%>"
+							><%=item.options[3]%></option
+						>
+					</select>
+				</div>
+				<%i++;%> <%})%>
+                <button type="submit">Submit</button>
+            </form>
+            <form action="/option" method="GET">
+                <button type="submit">Again</button>
+            </form>
+		</div>
+
+		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+		<script src="../jquery-3.4.1.min.js"></script>
+		<script src="../animation.js"></script>
+	</body>
+</html>

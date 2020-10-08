@@ -1,0 +1,124 @@
+/*--------------------------------*/
+/*BASIC SETUP*/
+/*--------------------------------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 22px;
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+body {
+	color: white;
+	background-color: #000000;
+	background-image: url(inspiration-geometry.png);
+}
+html,
+body {
+	overflow-x: hidden;
+}
+.info {
+	float: right;
+	font-size: 120%;
+	vertical-align: center;
+	padding: 10px;
+	margin: 20px;
+	margin-right: 60px;
+	color: orangered;
+	font-weight: 400;
+}
+ion-icon {
+	font-size: 35px;
+	color: orangered;
+}
+.form-heading {
+	font-family: 'Roboto', sans-serif;
+	font-size: 200%;
+	-webkit-text-stroke: 1px orangered;
+	color: transparent;
+	margin-top: 60px;
+	left: 40%;
+	position: relative;
+	display: block;
+	width: auto;
+}
+
+.form-heading:hover {
+	color: red;
+	-webkit-text-stroke: 1px black;
+	transition: 0.5s;
+}
+.form-heading:before,
+.form-heading:after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+.form-heading:hover:before {
+	color: orangered;
+	z-index: 1;
+	-webkit-text-stroke: 1px black;
+	transform: translate(5px, -5px);
+}
+.form-heading:hover:after {
+	color: orange;
+	z-index: 2;
+	-webkit-text-stroke: 1px black;
+	transform: translate(10px, -10px);
+}
+.form-wrapper {
+	font-size: 80%;
+	width: 100%;
+	text-align: center;
+}
+.item {
+	margin: 20px;
+	padding: 5px;
+	background-color: rgba(255, 255, 255, 0.486);
+	color: white;
+	border-radius: 30px;
+	width: auto;
+	transition: color, background-color 0.5s;
+}
+.item:hover {
+	background-color: white;
+	color: black;
+	transition: color, background-color 0.5s;
+}
+h2 {
+	margin: 20px;
+}
+select {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	width: 50%;
+	height: 30px;
+	font-size: 100%;
+	outline: none;
+	border: none;
+}
+option {
+	background-color: rgba(255, 255, 255, 0.158);
+	text-align: right;
+}
+button {
+	width: 100px;
+	height: 35px;
+	border: none;
+	outline: none;
+	color: black;
+	background-color: white;
+	margin: 20px;
+	transition: background-color 0.5s;
+}
+button:hover {
+	background-color: orange;
+	transition: background-color 0.2s;
+}

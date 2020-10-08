@@ -1,0 +1,308 @@
+/*--------------------------------*/
+/*BASIC SETUP*/
+/*--------------------------------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 22px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+}
+body {
+	color: white;
+	background-color: #000000;
+	background-image: url(inspiration-geometry.png);
+}
+html,
+body {
+	overflow-x: hidden;
+}
+/*--------------------------------*/
+/*HEADER STYLING*/
+/*--------------------------------*/
+.header {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	z-index: 10;
+}
+.nav.scrollUp {
+	transform: translateY(-80px);
+}
+.animate__animated.animate__bounceInDown,
+.animate__animated.animate__bounceOutUp {
+	--animate-duration: 1s;
+}
+.nav ul {
+	float: right;
+	list-style: none;
+	padding-right: 60px;
+	padding-top: 10px;
+}
+.nav ul li {
+	display: inline-block;
+	padding: 10px;
+	margin: 5px;
+}
+.nav ul li a {
+	color: orangered;
+	text-decoration: none;
+	letter-spacing: 0px;
+	transition: all 0.5s;
+	font-family: 'Lato', sans-serif;
+	font-size: 85%;
+	font-weight: 400;
+}
+a:active {
+	text-decoration: none;
+}
+.nav ul li a:hover {
+	letter-spacing: 3px;
+	transition: all 0.5s;
+}
+.hero-text {
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	left: 35%;
+}
+.main-text {
+	font-size: 400%;
+	-webkit-text-stroke: 2px orangered;
+	color: transparent;
+	margin-bottom: 0px;
+	position: relative;
+	display: block;
+}
+
+.main-text:hover {
+	color: red;
+	-webkit-text-stroke: 1px black;
+	transition: 0.5s;
+}
+.main-text:before,
+.main-text:after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+.main-text:hover:before {
+	color: orangered;
+	z-index: 1;
+	-webkit-text-stroke: 1px black;
+	transform: translate(5px, -5px);
+}
+.main-text:hover:after {
+	color: orange;
+	z-index: 2;
+	-webkit-text-stroke: 1px black;
+	transform: translate(10px, -10px);
+}
+.moto {
+	font-size: 80%;
+	color: orangered;
+	padding-left: 110px;
+	margin-top: 0px;
+}
+/*--------------------------------*/
+/*DESCRIPTION STYLING*/
+/*--------------------------------*/
+.about {
+	width: 100%;
+	height: 70vh;
+	background-color: orangered;
+	position: relative;
+}
+.about img {
+	position: absolute;
+	top: -100px;
+	left: 40%;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: red;
+}
+.desc {
+	position: absolute;
+	top: 50%;
+	width: 50%;
+	left: 25%;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-weight: lighter;
+	font-weight: 400;
+	color: black;
+}
+/*--------------------------------*/
+/*FORM STYLING*/
+/*--------------------------------*/
+.form {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	color: black;
+}
+.message {
+	font-size: 60%;
+	color: red;
+	font-weight: 400;
+	text-align: center;
+	margin-left: -60px;
+}
+.form-wrapper {
+	position: absolute;
+	top: 30%;
+	left: 15%;
+	width: 70%;
+	height: 350px;
+	background-color: white;
+	font-family: 'Lato', sans-serif;
+}
+.signIn-message {
+	visibility: hidden;
+}
+.sign {
+	width: 45%;
+	height: 100%;
+	display: inline-block;
+	padding: 30px;
+	margin-left: 40px;
+}
+.sign input {
+	width: 80%;
+	padding: 5px;
+	margin: 10px;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 70%;
+}
+.sign input:focus {
+	border-bottom: 1px solid orangered;
+}
+.slider {
+	z-index: 2;
+	background-color: orangered;
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	box-shadow: -10px 0px 15px black;
+}
+.sign button {
+	margin-left: 95px;
+	margin-top: 30px;
+	border: none;
+	background-color: orangered;
+	color: black;
+	height: 30px;
+	width: 130px;
+	padding: 10px;
+	box-shadow: 5px 5px 15px white;
+	transition: box-shadow 0.5s;
+	font-weight: 400;
+}
+.sign button:hover {
+	box-shadow: 5px 10px 15px grey;
+	transition: all 0.5s;
+}
+.signIn {
+	margin-top: -40px;
+}
+.signIn p {
+	margin-left: 110px;
+}
+ion-icon {
+	font-size: 40px;
+	margin: 10px 20px 5px 40px;
+	cursor: pointer;
+	color: black;
+}
+.content {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: 400;
+}
+.content-up {
+	visibility: hidden;
+}
+.switch-button {
+	border: none;
+	background-color: black;
+	color: orangered;
+	height: 30px;
+	width: 80px;
+	box-shadow: 5px 5px 15px orangered;
+	transition: box-shadow 0.5s;
+	margin-top: 40px;
+	outline: none;
+}
+.switch-button:hover {
+	background-color: orange;
+	color: black;
+	box-shadow: 5px 10px 15px black;
+	transition: all 0.5s;
+}
+.switch-button:active {
+	outline: none;
+}
+/*--------------------------------*/
+/*FOOTER STYLING*/
+/*--------------------------------*/
+.footer {
+	width: 100%;
+	height: 40vh;
+	background-color: orangered;
+	position: relative;
+	color: black;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+.contact {
+	font-size: 90%;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+}
+.social-handles {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+.social-handles ul {
+	list-style: none;
+}
+.social-handles ul li {
+	display: inline-block;
+}
+.social-handles ul li a {
+	text-decoration: none;
+}
+.social-handles ion-icon {
+	font-size: 30px;
+}
+.copyright {
+	font-size: 90%;
+	position: absolute;
+	bottom: 20%;
+	left: 40%;
+}

@@ -1,0 +1,164 @@
+<html lang="en">
+	<head>
+		<title>Quiz Mania</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+		/>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="header" id="home">
+			<div class="nav animate__animated">
+				<ul>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#about">ABOUT US</a></li>
+					<li><a href="#form">SIGN UP</a></li>
+					<li><a href="#footer">CONTACT</a></li>
+				</ul>
+			</div>
+			<div class="hero-text">
+				<div class="main-text" data-text="Quiz Mania">Quiz Mania</div>
+				<br />
+				<div class="moto"><em>accrete your knowledge</em></div>
+			</div>
+		</div>
+		<div id="about" class="about">
+			<img src="css/logo.png" alt="logo" class="click" />
+			<div class="desc">
+				<p>
+					This is a website dedicated to enhance and accrete your
+					knowledge in various fields. It let you set your target in a
+					very customise way like how many questions you want, their
+					difficulty level,and the topic you want. At the end it shows
+					you the result.
+				</p>
+			</div>
+		</div>
+		<div id="form" class="form">
+			<div class="form-wrapper">
+				<div class="signIn sign">
+					<div class="message"><%=messageIn%></div>
+					<form action="/" method="POST">
+						<input
+							type="text"
+							name="inName"
+							placeholder="Your Good Name"
+							required
+						/>
+						<input
+							type="password"
+							name="inPassword"
+							placeholder="Your Secret"
+							required
+						/>
+						<button type="submit">Get Started</button><br />
+						<br />
+						<p>
+							Login With <br /><br />
+							<hr />
+						</p>
+						<ion-icon name="logo-facebook"></ion-icon>
+						<ion-icon name="logo-google"></ion-icon>
+						<ion-icon name="logo-instagram"></ion-icon>
+					</form>
+				</div>
+				<div class="signUp sign">
+					<div class="message"><%=messageUp%></div>
+					<form action="/" method="POST">
+						<input
+							type="text"
+							name="upName"
+							placeholder="Your Good Name"
+							required
+						/>
+						<input
+							type="password"
+							name="upPassword"
+							placeholder="Your Secret"
+							required
+						/>
+						<input
+							type="password"
+							name="upCPassword"
+							placeholder="One More Time"
+							required
+						/>
+						<input
+							type="email"
+							name="upEmail"
+							placeholder="Your Virtual Address"
+							required
+						/>
+						<input
+							type="tel"
+							name="upContact"
+							placeholder="Your Contact Number"
+						/><br />
+						<button type="submit">Join Us</button>
+					</form>
+				</div>
+				<div class="slider">
+					<div class="content-in content">
+						Join Us <br />
+						To Enhance Your Knowledge <br /><button
+							id="button-to-up"
+							class="switch-button"
+						>
+							Sign Up
+						</button>
+					</div>
+					<div class="content-up content">
+						Continue Where You Left <br />
+						<button id="button-to-in" class="switch-button">
+							Sign In
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer" id="footer">
+			<div class="contact">
+				<p>
+					Plot-86, <br />
+					Park Avenue, <br />
+					Pasedena, California
+				</p>
+			</div>
+			<div class="social-handles">
+				<ul>
+					<li>
+						<a href="#"
+							><ion-icon name="mail-open-sharp"></ion-icon
+						></a>
+					</li>
+					<li>
+						<a href="#"
+							><ion-icon name="logo-facebook"></ion-icon
+						></a>
+					</li>
+					<li>
+						<a href="#"
+							><ion-icon name="logo-instagram"></ion-icon
+						></a>
+					</li>
+					<li>
+						<a href="#"><ion-icon name="logo-github"></ion-icon></a>
+					</li>
+				</ul>
+			</div>
+			<div class="copyright">All Rights Reserved © 2020</div>
+		</div>
+		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+		<script src="../jquery-3.4.1.min.js"></script>
+		<script src="../animation.js"></script>
+	</body>
+</html>
